@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideStart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.01" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideEnd"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideBottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.99" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideTop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.36" />
+
+    <View
+        android:id="@+id/horizontalSpace1"
+        android:layout_width="3dp"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toStartOf="@id/horizontalSpace2"
+        app:layout_constraintStart_toStartOf="@id/guideStart" />
+
+    <View
+        android:id="@+id/horizontalSpace2"
+        android:layout_width="3dp"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toStartOf="@id/horizontalSpace3"
+        app:layout_constraintStart_toEndOf="@id/horizontalSpace1" />
+
+    <View
+        android:id="@+id/horizontalSpace3"
+        android:layout_width="3dp"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/guideEnd"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@id/horizontalSpace2" />
+
+    <View
+        android:id="@+id/verticalSpace1"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        app:layout_constraintBottom_toTopOf="@id/verticalSpace2"
+        app:layout_constraintTop_toTopOf="@id/guideTop" />
+
+    <View
+        android:id="@+id/verticalSpace2"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        app:layout_constraintBottom_toTopOf="@id/verticalSpace3"
+        app:layout_constraintTop_toBottomOf="@id/verticalSpace1" />
+
+    <View
+        android:id="@+id/verticalSpace3"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        app:layout_constraintBottom_toTopOf="@id/verticalSpace4"
+        app:layout_constraintTop_toBottomOf="@id/verticalSpace2" />
+
+    <View
+        android:id="@+id/verticalSpace4"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        app:layout_constraintBottom_toBottomOf="@id/guideBottom"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/verticalSpace3" />
+
+    <club.cred.neopop.PopFrameLayout
+        android:id="@+id/button_clear"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@id/verticalSpace1"
+        app:layout_constraintEnd_toEndOf="@id/horizontalSpace2"
+        app:layout_constraintStart_toStartOf="@id/guideStart"
+        app:layout_constraintTop_toTopOf="@id/guideTop"
+        app:neopop_center_surface_color="#a5a5a1">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="AC"
+            android:textColor="#060606"
+            android:textSize="28sp" />
+
+    </club.cred.neopop.PopFrameLayout>
+
+
+<!--    <club.cred.neopop.PopFrameLayout-->
+<!--        android:id="@+id/button_para2"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:clickable="true"-->
+<!--        app:layout_constraintBottom_toBottomOf="@id/verticalSpace1"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/horizontalSpace2"-->
+<!--        app:layout_constraintStart_toStartOf="@id/horizontalSpace1"-->
+<!--        app:layout_constraintTop_toTopOf="@id/guideTop"-->
+<!--        app:neopop_center_surface_color="#a5a5a1">-->
+
+<!--        <androidx.appcompat.widget.AppCompatTextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:text="+/-"-->
+<!--            android:textColor="#060606"-->
+<!--            android:textSize="28sp" />-->
+<!--    </club.cred.neopop.PopFrameLayout>-->
+
+    <club.cred.neopop.PopFrameLayout
+        android:id="@+id/button_para1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@id/verticalSpace1"
+        app:layout_constraintEnd_toEndOf="@id/horizontalSpace3"
+        app:layout_constraintStart_toStartOf="@id/horizontalSpace2"
+        app:layout_constraintTop_toTopOf="@id/guideTop"
+        app:neopop_center_surface_color="#a5a5a1">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="%"
+            android:textColor="#060606"
+            android:textSize="28sp" />
+    </club.cred.neopop.PopFrameLayout>
+
+    <club.cred.neopop.PopFrameLayout
+        android:id="@+id/button_divide"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@id/verticalSpace1"
+        app:layout_constraintEnd_toEndOf="@id/guideEnd"
+        app:layout_constraintStart_toStartOf="@id/horizontalSpace3"
+        app:layout_constraintTop_toTopOf="@id/guideTop"
+        app:neopop_center_surface_color="#fe9500">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="/"
+            android:textColor="#ffff"
+            android:textSize="28sp" />
+    </club.cred.neopop.PopFrameLayout>
+
+    <club.cred.neopop.PopFrameLayout
+        android:id="@+id/button7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@id/verticalSpace2"
+        app:layout_constraintEnd_toEndOf="@id/horizontalSpace1"
+        app:layout_constraintStart_toStartOf="@id/guideStart"
+        app:layout_constraintTop_toTopOf="@id/verticalSpace1"
+        app:neopop_center_surface_color="#323232">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="7"
+            android:textColor="#ffff"
+            android:textSize="28sp" />
+
+    </club.cred.neopop.PopFrameLayout>
+
+    <club.cred.neopop.PopFrameLayout
+        android:id="@+id/button8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@id/verticalSpace2"
+        app:layout_constraintEnd_toEndOf="@id/horizontalSpace2"
+        app:layout_constraintStart_toStartOf="@id/horizontalSpace1"
+        app:layout_constraintTop_toTopOf="@id/verticalSpace1"
+        app:neopop_center_surface_color="#323232">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="8"
+            android:textColor="#ffff"
+            android:textSize="28sp" />
+    </club.cred.neopop.PopFrameLayout>
+
+    <club.cred.neopop.PopFrameLayout
+        android:id="@+id/button9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@id/verticalSpace2"
+        app:layout_constraintEnd_toEndOf="@id/horizontalSpace3"
+        app:layout_constraintStart_toStartOf="@id/horizontalSpace2"
+        app:layout_constraintTop_toTopOf="@id/verticalSpace1"
+        app:neopop_center_surface_color="#323232">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="9"
+            android:textColor="#ffff"
+            android:textSize="28sp" />
+    </club.cred.neopop.PopFrameLayout>
+
+    <club.cred.neopop.PopFrameLayout
+        android:id="@+id/button_multi"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@id/verticalSpace2"
+        app:layout_constraintEnd_toEndOf="@id/guideEnd"
+        app:layout_constraintStart_toStartOf="@id/horizontalSpace3"
+        app:layout_constraintTop_toTopOf="@id/verticalSpace1"
+        app:neopop_center_surface_color="#fe9500">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="x"
+            android:textColor="#ffff"
+            android:textSize="28sp" />
+    </club.cred.neopop.PopFrameLayout>
+
+    <club.cred.neopop.PopFrameLayout
+        android:id="@+id/button4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@id/verticalSpace3"
+        app:layout_constraintEnd_toEndOf="@id/horizontalSpace1"
+        app:layout_constraintStart_toStartOf="@id/guideStart"
+        app:layout_constraintTop_toTopOf="@id/verticalSpace2"
+        app:neopop_center_surface_color="#323232">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="4"
+            android:textColor="#ffff"
+            android:textSize="28sp" />
+
+    </club.cred.neopop.PopFrameLayout>
+
+    <club.cred.neopop.PopFrameLayout
+        android:id="@+id/button5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@id/verticalSpace3"
+        app:layout_constraintEnd_toEndOf="@id/horizontalSpace2"
+        app:layout_constraintStart_toStartOf="@id/horizontalSpace1"
+        app:layout_constraintTop_toTopOf="@id/verticalSpace2"
+        app:neopop_center_surface_color="#323232">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="5"
+            android:textColor="#ffff"
+            android:textSize="28sp" />
+
+    </club.cred.neopop.PopFrameLayout>
+
+    <club.cred.neopop.PopFrameLayout
+        android:id="@+id/button6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@id/verticalSpace3"
+        app:layout_constraintEnd_toEndOf="@id/horizontalSpace3"
+        app:layout_constraintStart_toStartOf="@id/horizontalSpace2"
+        app:layout_constraintTop_toTopOf="@id/verticalSpace2"
+        app:neopop_center_surface_color="#323232">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="6"
+            android:textColor="#ffff"
+            android:textSize="28sp" />
+
+    </club.cred.neopop.PopFrameLayout>
+
+    <club.cred.neopop.PopFrameLayout
+        android:id="@+id/button_sub"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@id/verticalSpace3"
+        app:layout_constraintEnd_toEndOf="@id/guideEnd"
+        app:layout_constraintStart_toStartOf="@id/horizontalSpace3"
+        app:layout_constraintTop_toTopOf="@id/verticalSpace2"
+        app:neopop_center_surface_color="#fe9500">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="-"
+            android:textColor="#ffff"
+            android:textSize="28sp" />
+    </club.cred.neopop.PopFrameLayout>
+
+    <club.cred.neopop.PopFrameLayout
+        android:id="@+id/button1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@id/verticalSpace4"
+        app:layout_constraintEnd_toEndOf="@id/horizontalSpace1"
+        app:layout_constraintStart_toStartOf="@id/guideStart"
+        app:layout_constraintTop_toTopOf="@id/verticalSpace3"
+        app:neopop_center_surface_color="#323232">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="1"
+            android:textColor="#ffff"
+            android:textSize="28sp" />
+    </club.cred.neopop.PopFrameLayout>
+
+    <club.cred.neopop.PopFrameLayout
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@id/verticalSpace4"
+        app:layout_constraintEnd_toEndOf="@id/horizontalSpace2"
+        app:layout_constraintStart_toStartOf="@id/horizontalSpace1"
+        app:layout_constraintTop_toTopOf="@id/verticalSpace3"
+        app:neopop_center_surface_color="#323232">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="2"
+            android:textColor="#ffff"
+            android:textSize="28sp" />
+    </club.cred.neopop.PopFrameLayout>
+
+    <club.cred.neopop.PopFrameLayout
+        android:id="@+id/button3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@id/verticalSpace4"
+        app:layout_constraintEnd_toEndOf="@id/horizontalSpace3"
+        app:layout_constraintStart_toStartOf="@id/horizontalSpace2"
+        app:layout_constraintTop_toTopOf="@id/verticalSpace3"
+        app:neopop_center_surface_color="#323232">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="3"
+            android:textColor="#ffff"
+            android:textSize="28sp" />
+    </club.cred.neopop.PopFrameLayout>
+
+    <club.cred.neopop.PopFrameLayout
+        android:id="@+id/button_add"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@id/verticalSpace4"
+        app:layout_constraintEnd_toEndOf="@id/guideEnd"
+        app:layout_constraintStart_toStartOf="@id/horizontalSpace3"
+        app:layout_constraintTop_toTopOf="@id/verticalSpace3"
+        app:neopop_center_surface_color="#fe9500">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="+"
+            android:textColor="#ffff"
+            android:textSize="28sp" />
+    </club.cred.neopop.PopFrameLayout>
+
+    <club.cred.neopop.PopFrameLayout
+        android:id="@+id/button0"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@id/guideBottom"
+        app:layout_constraintEnd_toEndOf="@id/horizontalSpace2"
+        app:layout_constraintStart_toStartOf="@id/guideStart"
+        app:layout_constraintTop_toTopOf="@id/verticalSpace4"
+        app:neopop_center_surface_color="#323232">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="0"
+            android:textColor="#ffff"
+            android:textSize="28sp" />
+    </club.cred.neopop.PopFrameLayout>
+
+    <club.cred.neopop.PopFrameLayout
+        android:id="@+id/button_dot"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@id/guideBottom"
+        app:layout_constraintEnd_toEndOf="@id/horizontalSpace3"
+        app:layout_constraintStart_toStartOf="@id/horizontalSpace2"
+        app:layout_constraintTop_toTopOf="@id/verticalSpace4"
+        app:neopop_center_surface_color="#323232">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="."
+            android:textColor="#ffff"
+            android:textSize="28sp" />
+    </club.cred.neopop.PopFrameLayout>
+
+    <club.cred.neopop.PopFrameLayout
+        android:id="@+id/button_equal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@id/guideBottom"
+        app:layout_constraintEnd_toEndOf="@id/guideEnd"
+        app:layout_constraintStart_toStartOf="@id/horizontalSpace3"
+        app:layout_constraintTop_toTopOf="@id/verticalSpace4"
+        app:neopop_center_surface_color="#fe9500">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="="
+            android:textColor="#ffff"
+            android:textSize="28sp" />
+    </club.cred.neopop.PopFrameLayout>
+
+
+    <TextView
+        android:id="@+id/input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/background_light"
+        android:textSize="68sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.909"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.252" />
+
+    <TextView
+        android:id="@+id/output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/background_light"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.909"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.051" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
