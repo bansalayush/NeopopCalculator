@@ -22,3 +22,25 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
+    - name: Build APK with Gradle
+      run: ./gradlew assembleDebug
+    - name: Check if APK is generated
+      run:  pwd
+  
+#   publish: 
+#     needs: build
+#     runs-on: ubuntu-latest
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
