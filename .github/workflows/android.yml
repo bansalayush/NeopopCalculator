@@ -25,7 +25,7 @@ jobs:
     - name: Build APK with Gradle
       run: ./gradlew assembleDebug
     - name: Check if APK is generated
-      run:  pwd
+      run:  cd app/build/outputs/apk/debug && ls
   
 #   publish: 
 #     needs: build
