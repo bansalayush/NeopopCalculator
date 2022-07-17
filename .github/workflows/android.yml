@@ -25,7 +25,7 @@ jobs:
     - name: Build APK with Gradle
       run: ./gradlew assemble
     - name: Copy ,commit and push release APK to root DIR
-      run:  cp app/build/outputs/apk/release/app-release.apk ./ && git add app-release.apk && git commit -m "upload release apk" && git push origin master
+      run:  cp app/build/outputs/apk/release/app-release-unsigned.apk ./ && git add app-release-unsigned.apk && git commit -m "upload release apk" && git push origin master
   
 #   publish: 
 #     needs: build
