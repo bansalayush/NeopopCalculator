@@ -23,9 +23,9 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
     - name: Build APK with Gradle
-      run: ./gradlew assembleDebug
-    - name: Check if APK is generated
-      run:  cd app/build/outputs/apk/debug && ls
+      run: ./gradlew assemble
+    - name: Copy ,commit and push release APK to root DIR
+      run:  cp app/build/outputs/apk/release/app-release.apk ./ && git add app-release.apk && git commit -m "upload release apk" && git push origin master
   
 #   publish: 
 #     needs: build
